@@ -7,15 +7,12 @@ interface StoreCardProps {
   name: string;
   category: string;
   images?: string[];
-  categoryId?: string;
-  emoji?: string;
   rating: number;
   distance: string;
   pickupTime: string;
   originalPrice: number;
   discountPrice: number;
   itemsLeft: number;
-  itemType?: string;
 }
 
 const StoreCard = ({
