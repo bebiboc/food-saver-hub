@@ -105,10 +105,6 @@ const ComingSoon = () => {
     setOriginalPhone("");
     setIsEditing(false);
     setIsSubmitted(true);
-    toast({
-      title: "You're on the list! 🎉",
-      description: "We'll notify you as soon as we launch.",
-    });
 
     // send phone to backend if available (best-effort) and report failures
     (async () => {
@@ -187,36 +183,38 @@ const ComingSoon = () => {
 
           {/* Phone form */}
           {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
               {isEditing && originalPhone && (
-                <p className="text-sm text-primary-foreground/80 mb-2 w-full text-center sm:text-left">
+                <p className="text-sm text-primary-foreground/80 mb-4 text-center">
                   Đang sửa số: <strong>{originalPhone}</strong>
                 </p>
               )}
-              <div className="relative flex-1">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <input
-                  type="tel"
-                  inputMode="tel"
-                  value={phone}
-                  onChange={(e) => {
-                    // allow only digits and plus at the start
-                    let val = e.target.value;
-                    if (val.startsWith('+')) {
-                      val = '+' + val.slice(1).replace(/\D/g, "");
-                    } else {
-                      val = val.replace(/\D/g, "");
-                    }
-                    setPhone(val);
-                  }}
-                  placeholder="Nhập số điện thoại của bạn"
-                  className="w-full h-14 pl-12 pr-4 rounded-xl bg-card text-foreground placeholder:text-muted-foreground shadow-card focus:outline-none focus:ring-2 focus:ring-secondary"
-                  required
-                />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative flex-1">
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <input
+                    type="tel"
+                    inputMode="tel"
+                    value={phone}
+                    onChange={(e) => {
+                      // allow only digits and plus at the start
+                      let val = e.target.value;
+                      if (val.startsWith('+')) {
+                        val = '+' + val.slice(1).replace(/\D/g, "");
+                      } else {
+                        val = val.replace(/\D/g, "");
+                      }
+                      setPhone(val);
+                    }}
+                    placeholder="Nhập số điện thoại của bạn"
+                    className="w-full h-14 pl-12 pr-4 rounded-xl bg-card text-foreground placeholder:text-muted-foreground shadow-card focus:outline-none focus:ring-2 focus:ring-secondary"
+                    required
+                  />
+                </div>
+                <Button type="submit" variant="warm" size="lg" disabled={!phone || !isValidVietnamesePhone(phone)}>
+                  {isEditing ? "Cập nhật" : "Thông báo cho tôi"}
+                </Button>
               </div>
-              <Button type="submit" variant="warm" size="lg" disabled={!phone || !isValidVietnamesePhone(phone)}>
-                {isEditing ? "Cập nhật" : "Thông báo cho tôi"}
-              </Button>
             </form>
           ) : (
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto">
