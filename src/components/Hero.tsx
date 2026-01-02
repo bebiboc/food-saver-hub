@@ -96,21 +96,25 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight text-balance">
-              Mua thực phẩm ngon,{" "}
+              Thực phẩm ngon,{" "}
               <span className="text-secondary">rẻ hơn đến 70%</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg">
-              Giải cứu thực phẩm cuối ngày — từ rau, thịt, hoa quả đến bánh ngọt — từ các quán bạn yêu thích tại Hà Nội, đồng thời chung tay giảm lãng phí thực phẩm.
-            </p>
+            <div className="space-y-4 max-w-lg">
+              <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+                Giải cứu thực phẩm cuối ngày — từ rau, thịt, hoa quả đến bánh ngọt — từ các quán bạn yêu thích tại Hà Nội, đồng thời chung tay giảm lãng phí thực phẩm.
+              </p>
 
-             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg added">
-              Mỗi túi bất ngờ bạn mua = 1 phần thực phẩm không bị bỏ đi 🌱
-            </p>
+              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border-l-4 border-secondary">
+                <p className="text-base md:text-lg text-primary-foreground font-medium">
+                  🌱 Mỗi túi bất ngờ bạn mua = 1 phần thực phẩm không bị bỏ đi
+                </p>
+              </div>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg mt-4">
-              Đăng ký ngay để nhận thông báo qua Zalo khi chúng mình ra mắt thử nghiệm vào tháng 01 năm 2026 — số lượng người dùng giới hạn!
-            </p>
+              <p className="text-base md:text-lg text-primary-foreground/90 leading-relaxed">
+                <strong>Đăng ký ngay</strong> để nhận thông báo qua Zalo khi chúng mình ra mắt thử nghiệm vào tháng 01 năm 2026 — <span className="text-secondary font-semibold">số lượng người dùng giới hạn!</span>
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative flex-1 max-w-md">

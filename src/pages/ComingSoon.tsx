@@ -189,7 +189,7 @@ const ComingSoon = () => {
                   Hãy là những người đầu tiên tiết kiệm thực phẩm ngon và giảm lãng phí ở Hà Nội.
                 </p>
                 <p className="text-base md:text-lg text-primary-foreground/80 leading-relaxed">
-                  Nhập số điện thoại để nhận thông báo qua Zalo khi chúng mình ra mắt.
+                 Đăng ký và nhận thông báo qua Zalo khi chúng mình ra mắt.
                 </p>
               </div>
             </div>
