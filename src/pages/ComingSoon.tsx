@@ -172,19 +172,27 @@ const ComingSoon = () => {
             Sắp ra mắt!
           </h1>
 
-          {isSubmitted ? (
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-md mx-auto">
-            </p>
-          ) : (
-            <>
-              <p className="text-lg md:text-xl text-primary-foreground/80 mb-2 max-w-md mx-auto">
-                ⚠️ Các túi thực phẩm bất ngờ hiển thị chỉ là ví dụ — hiện tại bạn cần đăng ký để được mở quyền mua khi ra mắt.
-              </p>
-              <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-md mx-auto">
-                Số lượng người dùng giới hạn! Hãy là những người đầu tiên tiết kiệm thực phẩm ngon và giảm lãng phí ở Hà Nội.<br />
-                Nhập số điện thoại để nhận thông báo qua Zalo khi chúng mình ra mắt.
-              </p>
-            </>
+          {!isSubmitted && (
+            <div className="space-y-6 mb-10 max-w-2xl mx-auto">
+              <div className="bg-secondary/20 backdrop-blur-sm rounded-2xl p-6 border border-secondary/30">
+                <p className="text-base md:text-lg text-primary-foreground/90 leading-relaxed">
+                  <span className="text-2xl mr-2">⚠️</span>
+                  <strong>Lưu ý:</strong> Các túi thực phẩm bất ngờ hiển thị chỉ là ví dụ — hiện tại bạn cần đăng ký để được mở quyền mua khi ra mắt.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-primary-foreground font-semibold">
+                  🎯 Số lượng người dùng giới hạn!
+                </p>
+                <p className="text-base md:text-lg text-primary-foreground/80 leading-relaxed">
+                  Hãy là những người đầu tiên tiết kiệm thực phẩm ngon và giảm lãng phí ở Hà Nội.
+                </p>
+                <p className="text-base md:text-lg text-primary-foreground/80 leading-relaxed">
+                  Nhập số điện thoại để nhận thông báo qua Zalo khi chúng mình ra mắt.
+                </p>
+              </div>
+            </div>
           )}
 
           {/* Phone form */}

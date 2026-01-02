@@ -21,19 +21,16 @@
     <link rel="canonical" href="https://foodsave.app" />
     <script type="module" crossorigin src="/assets/index-D4xo9quA.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DATahCOj.css">
+    
+    <!-- GitHub Pages SPA redirect script -->
+    <script>
+      // Store the path and redirect to index.html
+      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+      location.replace(location.origin);
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
-    
-    <!-- GitHub Pages SPA handling -->
-    <script>
-      // Restore the path after 404 redirect
-      const redirect = sessionStorage.getItem('redirect');
-      if (redirect) {
-        sessionStorage.removeItem('redirect');
-        history.replaceState(null, null, redirect);
-      }
-    </script>
   </body>
 </html>
