@@ -176,13 +176,15 @@ const ComingSoon = () => {
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-md mx-auto">
             </p>
           ) : (
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-md mx-auto">
-              ⚠️ Các túi hiển thị chỉ là ví dụ — hiện tại bạn cần đăng ký để được mở quyền mua khi ra mắt.
-
-              Số lượng người dùng giới hạn! Hãy là những người đầu tiên tiết kiệm thực phẩm ngon và giảm lãng phí ở Hà Nội. 
-              
-              Nhập số điện thoại để nhận thông báo qua Zalo khi chúng tôi ra mắt.
-            </p>
+            <>
+              <p className="text-lg md:text-xl text-primary-foreground/80 mb-2 max-w-md mx-auto">
+                ⚠️ Các túi thực phẩm bất ngờ hiển thị chỉ là ví dụ — hiện tại bạn cần đăng ký để được mở quyền mua khi ra mắt.
+              </p>
+              <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-md mx-auto">
+                Số lượng người dùng giới hạn! Hãy là những người đầu tiên tiết kiệm thực phẩm ngon và giảm lãng phí ở Hà Nội.<br />
+                Nhập số điện thoại để nhận thông báo qua Zalo khi chúng mình ra mắt.
+              </p>
+            </>
           )}
 
           {/* Phone form */}
